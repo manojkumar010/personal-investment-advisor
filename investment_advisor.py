@@ -11,6 +11,18 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+# --- Custom CSS to reduce top space ---
+st.markdown("""
+<style>
+    .block-container {
+        padding-top: 2rem; /* Adjust this value as needed */
+        padding-bottom: 0rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+</style>
+""", unsafe_allow_html=True)
+
 # --- Main App ---
 st.title("Your Personalized Investment Advisor 📈")
 
