@@ -3,6 +3,14 @@ import plotly.graph_objects as go
 from modules.calculations import calculate_future_value, generate_investment_growth_data
 from modules.suggestions import get_fund_suggestions
 
+# --- Page Configuration ---
+st.set_page_config(
+    page_title="Personalized Investment Advisor",
+    page_icon="📈",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
 # --- Main App ---
 st.title("Your Personalized Investment Advisor 📈")
 
@@ -88,3 +96,8 @@ with st.expander("Why are there different 'Risk Tolerances'?"):
 
 with st.expander("How accurate are the fund suggestions?"):
     st.write("The fund suggestions provided are based on general investment principles and common mutual fund categories. They are intended as a guide to help you understand which types of funds might align with your stated risk tolerance and investment goals. However, these are not financial recommendations. Always consult with a qualified financial advisor before making any investment decisions.")
+
+# --- Developer Info ---
+st.sidebar.markdown("---")
+st.sidebar.write("Developed by: Manoj Kumar")
+st.sidebar.markdown("[LinkedIn Profile](https://www.linkedin.com/in/iam-manoj/)")
